@@ -12,7 +12,7 @@ var worker = function(items) {
         return temp >= 19;
     };
 
-    _.forEach(items, function(item, itemName) {
+    _.forEach(items, function(item /* value */, itemName /*key*/) {
         if (_.every(item, checkTemp)) {
             categories.hot.push(itemName);
         } else if (_.some(item, checkTemp)) {
